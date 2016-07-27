@@ -1,5 +1,5 @@
 all:
-	gcc basicBlas.c -lblas
+	gcc basicBlas.c ArrayPrint.c -lblas
 
 run: all
 	./a.out
