@@ -46,6 +46,7 @@ int main(){
   // free the malloc'd memory
   free(x);
   free(y);
+  free(m);
 
   return 0;
 }
