@@ -12,6 +12,7 @@ void printVec(int N, double* v, const char * s){
 
 
 // print a linear array as a matrix in row major order
+// matrix has M rows and N columns
 void printMatrixRowMajor(int M, int N, double* m, const char * s){
   int i=0;
   int j=0;
@@ -21,20 +22,21 @@ void printMatrixRowMajor(int M, int N, double* m, const char * s){
     printf("\t[");
     for(j=0; j<N-1; j++)
       printf("%3g, ", m[i*N+j]);
-    printf("%3g]\n", m[i*N+(M-1)]);
+    printf("%3g]\n", m[i*N+(N-1)]);
   }  
 }
 
 // print a linear array as a matrix in column major order
+// matrix has M rows and N columns
 void printMatrixColMajor(int M, int N, double* m, const char * s){
   int i=0;
   int j=0;
   printf("%s = \n",s);
-  for(i=0; i<N; i++)
+  for(i=0; i<M; i++)
   {
     printf("\t[");
-    for(j=0; j<M-1; j++)
-      printf("%3g, ", m[j*N+i]);
-    printf("%3g]\n", m[(M-1)*N+i]);
+    for(j=0; j<N-1; j++)
+      printf("%3g, ", m[j*M+i]);
+    printf("%3g]\n", m[(N-1)*M+i]);
   }  
 }
