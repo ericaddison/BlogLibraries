@@ -26,11 +26,12 @@ int main(){
   puts("");
   printVec(N, x, "x");
   printVec(N,y,"y");
+  puts("");
   printVec(N*N,A,"A(:)");
   printVec(N*M,B,"B(:)");
-  printMatrixRowMajor(N,N,A,"A RowMajor");
+  puts("");
   printMatrixColMajor(N,N,A,"A ColMajor");
-  printMatrixRowMajor(N,M,B,"B RowMajor");
+  puts("");
   printMatrixColMajor(N,M,B,"B ColMajor");
   puts("");
 
